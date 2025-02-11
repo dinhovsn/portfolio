@@ -1,0 +1,255 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 100;
+}
+
+#menuBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000; 
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem 0;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.mobile-menu {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.perfil-imagem {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.perfil-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #121855;   
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.texto-bemvindo {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    color: #666; 
+}
+
+.botao-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.botao-linkedin:hover {
+    background-color: #f5f5f5;
+}
+
+.sobre-mim {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-mim h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sobre-conteudo {
+    color: #666;
+}
+
+.sobre-conteudo p {
+    margin-bottom: 1rem;
+}
+
+.sobre-conteudo strong {
+    color: #1a1a1a;
+}
+
+.secao-projetos {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.secao-projetos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cartao-projeto {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.cartao-projetotras {
+    flex-direction: row-reverse;
+}
+
+.imagem-projeto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.imagem-projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.descricaodoprojeto {
+    flex: 1;
+}
+
+.descricaodoprojeto p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.secao-contato {
+    text-align: center;
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.secao-contato h2 {
+    margin-bottom: 1.5rem;
+}
+
+.secao-contato p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.email-link {
+    display: inline-block;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.email-link:hover {
+    color: #666;
+    border-color: #666;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .perfil-imagem {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cartao-projeto,
+    .cartao-projetotras {
+        flex-direction: column;
+    }
+
+    .imagem-projeto {
+        margin-bottom: 1.5rem;
+    }
+}
